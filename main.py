@@ -5,7 +5,7 @@ m = folium.Map(location=[48.8566, 2.3522], zoom_start=13)
 
 df = pd.read_csv("lieux.csv")
 
-for index, row in df.iterrows():
+for index, row in df.itertuples():
     folium.Marker(
         location=[row["latitude"], row["longitude"]],
         popup=row["description"],
